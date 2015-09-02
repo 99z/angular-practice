@@ -1,6 +1,6 @@
 <html ng-app="firstApp">
-<head ng-controller="FirstCtrl"> 
-  <title>{{ title }}</title>
+<head>
+  <title>Hello from AngularJS!</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
 
@@ -8,7 +8,8 @@
 
 </head>
 
-<body>
+<body ng-controller="FirstCtrl">
+  <h1>{{ title }}</h1>
 
   <p>Hi, this is an {{ "Angular expression" }}.</p>
   <p>It interpolates stuff, like {{ "strings" + " and simple operators" }}</p>
@@ -16,5 +17,9 @@
   <p>But unlike an ERB tag, you can't just run any Javascript you want.
      Trying to use off-the-shelf JS doesn't work, which is why you don't
      get a random number here: {{ Math.rand() }}</p>
+
+   <h3>{{ secondTitle}}</h3>
+   Input your secondTitle:
+   <input type="text" ng-model="secondTitle">
 </body>
 </html>
