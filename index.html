@@ -9,5 +9,12 @@
 </head>
 
 <body>
+
+  <p>Hi, this is an {{ "Angular expression" }}.</p>
+  <p>It interpolates stuff, like {{ "strings" + " and simple operators" }}</p>
+  <p>It can even add 2 + 2 to make {{ 2 + 2 }}</p>
+  <p>But unlike an ERB tag, you can't just run any Javascript you want.
+     Trying to use off-the-shelf JS doesn't work, which is why you don't
+     get a random number here: {{ Math.rand() }}</p>
 </body>
 </html>
